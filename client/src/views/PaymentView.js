@@ -39,7 +39,7 @@ function PaymentView(props) {
         return () => {
 
         }
-    }, [success, dispatch, order._id, props.history])
+    }, [success, dispatch, props.history])
 
     const paymentHandler = (method) => {
         dispatch(savePayment(method));
