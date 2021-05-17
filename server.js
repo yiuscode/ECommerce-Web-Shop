@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 //connect to mongodb
-mongoose.connect(process.env.PORT
+mongoose.connect(process.env.MONGODB_URI
 , { useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true}).catch(error => console.log);
 
 const app = express();
