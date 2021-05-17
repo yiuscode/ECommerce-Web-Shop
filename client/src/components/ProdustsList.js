@@ -8,18 +8,18 @@ function ProdustsList(props) {
 
 
 
-    const productList = useSelector(state => props.category ?  state.productCat : state.productList);
+    const productList = useSelector(state => props.category ? state.productCat : state.productList);
     const { products, loading, error } = productList;
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(props.category){
+        if (props.category) {
             dispatch(listCats(props.category))
-        }else{
+        } else {
             dispatch(listProducts());
         }
-        
+
 
         return () => {
 
@@ -30,7 +30,7 @@ function ProdustsList(props) {
         error ? (
             <div>{error}</div>
         ) :
-            <ul className="products">
+            <div className="products-container">            <ul className="products">
                 {
                     products.map(product =>
 
@@ -44,7 +44,8 @@ function ProdustsList(props) {
                         </li>
                     )
                 }
-            </ul>
+            </ul></div>
+
 
 
 }

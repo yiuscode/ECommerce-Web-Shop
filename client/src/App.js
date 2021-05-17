@@ -87,7 +87,7 @@ function App(props) {
           </Switch>
         </AnimatePresence>
       </main>
-      <footer className="footer">© 2021 All Rights Reserved - yiuswong@outlook.com</footer>
+      <footer className="footer"><div>Copyright © 2021. All Rights Reserved. Terms and Conditions | Privacy Statement</div><div>Email: yiuswong@outlook.com  |  Github: https://github.com/yiuscode/</div></footer>
     </div>
   );
 }
